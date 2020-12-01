@@ -43,7 +43,7 @@ rails g model Post title content category_id:integer
 # rails g model Post title content category:references
 ```
 
-> Category.rb
+> category.rb
 ```rb
 class Category < ActiveHash::Base
   include ActiveHash::Associations # this looks like the one
@@ -57,7 +57,7 @@ class Category < ActiveHash::Base
 end
 ```
 
-> Post.rb
+> post.rb
 ```rb
 class Post < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
@@ -65,7 +65,7 @@ class Post < ApplicationRecord
 end
 ```
 
-> Seeds.rb
+> seeds.rb
 ```rb
 p1 = Post.new
 p1.title = "title1"
