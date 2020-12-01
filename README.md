@@ -1,7 +1,6 @@
 # rails-module-active_hash
 > Active hash for rails.
 
-
 ## from:memory<Content>
 ```rb
 class Country < ActiveHash::Base
@@ -40,6 +39,8 @@ end
 ```rb
 rails g model Post title content category_id:integer
 # rails d model Post title content
+# 注意这里不要用(这种会要求有 categories表，导致save不成功)
+# rails g model Post title content category:references
 ```
 
 > Category.rb
